@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Decision Wheel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .wheel-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        .wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 10px solid #333;
+            position: relative;
+            overflow: hidden;
+            transform: rotate(0deg);
+            transition: transform 5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+        .wheel-segment {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: #ddd;
+            transform-origin: 100% 100%;
+            clip-path: polygon(100% 100%, 0% 100%, 100% 0%);
+        }
+        .wheel-segment:nth-child(odd) {
+            background-color: #ffc107;
+        }
+        .pointer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 10px 0 10px;
+            border-color: red transparent transparent transparent;
+            z-index: 10;
+        }
+        .spin-button {
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .spin-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="wheel-container">
+        <div class="wheel" id="wheel"></div>
+        <div class="pointer"></div>
+    </div>
+    <button class="spin-button" id="spin-button">Spin the Wheel</button>
+
+    <script>
+        const wheel = document.getElementById('wheel');
+        const spinButton = document.getElementById('spin-button');
+
+        // Generate 50 segments
+        const totalSegments = 50;
+        const segmentAngle = 360 / totalSegments;
+        const colors = ["#ffc107", "#ddd"];
+        for (let i = 0; i < totalSegments; i++) {
+            const segment = document.createElement('div');
+            segment.classList.add('wheel-segment');
+            segment.style.transform = `rotate(${i * segmentAngle}deg)`;
+            segment.style.backgroundColor = colors[i % 2];
+            segment.textContent = `Option ${i + 1}`;
+            segment.style.display = 'flex';
+            segment.style.alignItems = 'center';
+            segment.style.justifyContent = 'center';
+            segment.style.color = 'black';
+            segment.style.fontSize = '12px';
+            wheel.appendChild(segment);
+        }
+
+        spinButton.addEventListener('click', () => {
+            const randomDegree = Math.floor(Math.random() * 360) + 3600; // At least 10 full rotations
+            wheel.style.transform = `rotate(${randomDegree}deg)`;
+
+            // Calculate the selected segment
+            setTimeout(() => {
+                const normalizedDegree = randomDegree % 360;
+                const selectedSegment = Math.floor((totalSegments - (normalizedDegree / segmentAngle)) % totalSegments);
+                alert(`The wheel landed on: Option ${selectedSegment + 1}`);
+            }, 5000); // Match the animation duration
+        });
+    </script>
+</body>
+</html>
