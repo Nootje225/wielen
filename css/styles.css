@@ -3,6 +3,54 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 2em;
+  margin-top: 5em;
+  background-image: url(../images/abstract-elegant-geometric-shape-background-design_1017-50120.avif);
+}
+
+.nav-bar {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #009882;
+  color: #fff;
+  text-align: center;
+  font-size: 18pt;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question-btn {
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: #009882;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.instructions {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 3;
 }
 
 .wheels {
@@ -256,6 +304,45 @@ body {
   overflow-x: hidden;
   justify-content: center;
 }  
+
+#result {
+  margin-top: 15%
+}
+
+.nav-bar {
+  font-size: 16pt;
+  padding: 8px 0;
+}
+
+.question-btn {
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: #009882;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.instructions {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 3;
+}
 
 .whole {
   display: grid; /* Use grid layout */
