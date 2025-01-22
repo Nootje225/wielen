@@ -9,27 +9,32 @@
   <body>
     <div class="content-wrapper">
       <nav class="nav-bar">
-          <p>VRAGENWIEL</p>
+          <p>Het Vragenwiel</p>
       </nav>
       <button class="question-btn" onclick="toggleInstructions()">?</button>
         <div id="instructions" class="instructions">
-            <p>"Instructies"</p>
+            <p>Instructies:<br><br>
+
+                Kies een thema.<br>
+                Druk op 'spin'.<br>
+                Beantwoord de vraag.<br>
+                Ga het gesprek met elkaar aan!</p>
         </div>
     <div class="whole">
     <div id="result"></div>
     <section class="wheels">
     <fieldset class="wheel" id="toen">
-        <p>Verleden</p>
+        <p>Toen <br><span style="color: #00b499; font-size: 70%; font-weight: normal;">Hoe ben je hier gekomen?</span></p>
         <ul>
-            <li>Welke regel vond jij thuis niet zo leuk?</li>
-            <li>Welke vakantie vond je het mooiste en waarom?</li>
+            <li>Eens/oneens: Ik pas me in een groep vaak aan naar de mening van anderen.</li>
+            <li>Ben jij conflictvermijdend of ga je conflicten niet uit de weg?</li>
             <li>Heb je een geheim talent?</li>
             <li>Wat was jouw favoriete vak op de middelbare school?</li>
             <li>Welk vak vond je het minst leuk vroeger?</li>
             <li>Wat was jouw beste vak op de middelbare school?</li>
             <li>Wat was jouw slechtste vak op de middelbare school?</li>
             <li>Benoem een ding wat je hebt gedaan waar je trots op bent.</li>
-            <li>Benoem een ding wat je hebt gedaan waar je trots op bent.</li>
+            <li>Eens/oneens: Ik heb er helemaal geen moeite mee om te zeggen wat ik vind.</li>
             <li>Hoe zou jouw familie jou beschrijven?</li>
             <li>Waar was je als kind al goed in?</li>
             <li>Waarvoor kunnen mensen jou wakker maken?</li>
@@ -44,17 +49,17 @@
             <li>Waar zouden jouw ouders van zeggen waar je goed in bent?</li>
             <li>Wat is een valkuil van jezelf?</li>
             <li>Wat is een situatie waarvan je veel hebt geleerd?</li>
-            <li>Wat is het mooiste cadeau wat je ooit hebt gekregen?</li>
-            <li>Wat is het stomste cadeau wat je ooit hebt gekregen?</li>
+            <li>Vind jij het moeilijk of makkelijk om te praten met een vreemde?</li>
+            <li>Hoe ga jij er mee om als iemand jou kritiek geeft?</li>
             <li>Op welk personage uit een film/serie/game lijk jij?</li>
             <li>Wanneer heb je het laatst naar iemand geschreeuwd en waarom?</li>
             <li>Ben jij meer praktisch of creatief?</li>
             <li>Hoe belangrijk is familie voor jou?</li>
             <li>Hoe belangrijk zijn vrienden voor jou?</li>
             <li>Is jouw vertrouwen wel eens door iemand gebroken? Waardoor kwam dat?</li>
-            <li>Welke sport interesseert jou het meest?</li>
+            <li>Vind jij het moeilijk of makkelijk om een ander feedback te geven?</li>
             <li>Vind je het makkelijk of moeilijk om met anderen contact te maken?</li>
-            <li>Benoem een ding die je mist van op de middelbare school</li>
+            <li>Eens/oneens: Ik vind het lastig om mijn tekortkomingen toe te geven.</li>
             <li>Wat is het grappigste op school wat je ooit is overkomen?</li>
             <li>Wat is het meest uitdagende dat je op school hebt meegemaakt?</li>
             <li>Vind je het makkelijk of moeilijk om een compliment aan te nemen?</li>
@@ -76,7 +81,7 @@
         <button type="button" onclick="spinWheel('#toen')">SPIN</button>
     </fieldset>
     <fieldset class="wheel" id="heden">
-        <p>Heden</p>
+        <p>Nu <br><span style="color: #00b499; font-size: 70%; font-weight: normal;">Hoe zit je erbij?</span></p>
         <ul>
             <li>Wanneer werd jij voor het laatst verdrietig?</li>
             <li>Waarvan werd jij als laatst chagrijnig?</li>
@@ -84,14 +89,14 @@
             <li>Wat is het eerste dat je hebt gedaan vanochtend?</li>
             <li>Wanneer was je voor het laatst echt boos?</li>
             <li>Wanneer kan jouw dag niet meer stuk?</li>
-            <li>Wat is op dit moment jouw favoriete muziek?</li>
+            <li>Wanneer heb je voor het laatst om hulp gevraagd en waarom?</li>
             <li>Op een schaal van 1-10, hoe zeker ben jij van jezelf?</li>
             <li>Welk cijfer van 1-10 geef jij aan deze week?</li>
             <li>Welke schoolregel zou je willen veranderen?</li>
             <li>Waarvan werd jij als laatst super blij?</li>
             <li>Wat gaat er goed deze week?</li>
             <li>Waar loop je deze week tegenaan op school?</li>
-            <li>Hoe beschrijven vrienden jou?</li>
+            <li>Eens/oneens: Ik vind het makkelijk om een gesprek aan te knopen met mijn klasgenoten.</li>
             <li>Wanneer heb je voor het laatst iemand om hulp gevraagd?</li>
             <li>Wat heb je als laatst gekocht?</li>
             <li>Waar heb je het meeste zin in vandaag?</li>
@@ -132,7 +137,7 @@
           <button type="button" onclick="spinWheel('#heden')">SPIN</button>       
     </fieldset>
     <fieldset class="wheel" id="toekomst">
-        <p>Toekomst</p>
+        <p>Later <br><span style="color: #00b499; font-size: 70%; font-weight: normal;">Wat zijn jouw toekomstdromen?</span></p>
         <ul>
             <li>Wat zou je uit willen vinden?</li>
             <li>Wat zou je wensen als je twee wensen mocht doen?</li>
@@ -150,7 +155,7 @@
             <li>Hoe denk je jouw kwaliteiten in de praktijk te kunnen gebruiken?</li>
             <li>Wat zou je nog willen leren?</li>
             <li>Bij wat voor bedrijf zou jij stage willen lopen?</li>
-            <li>Heb je een bijbaan? Zo ja, hoe ben je daar aan gekomen?</li>
+            <li>Welke dienst(en) zou jij tijdens jouw toekomstige baan willen verlenen?</li>
             <li>Wat vind jij het belangrijkste in jouw toekomstige baan?</li>
             <li>Wat vind jij belangrijker? Gezondheid of vrijheid?</li>
             <li>Welke kwaliteit heb je nodig om de volgende stap te zetten in jouw loopbaan?</li>
@@ -160,7 +165,7 @@
             <li>Welke taal zou je vloeiend willen spreken?</li>
             <li>Wat is iets wat je niet durft, maar wel zou willen doen?</li>
             <li>Van wat zou jij het beste ter wereld willen zijn?</li>
-            <li>Hoe wil je later herinnerd worden?</li>
+            <li>Vind jij het makkelijk of moeilijk om klantgericht te zijn en waarom?</li>
             <li>Welk praktisch vak zou je nog willen leren dat niet in jouw opleiding voorkomt?</li>
             <li>In welke branche zie jij jezelf later werken?</li>
             <li>Zie jij jezelf later in een team werken of liever alleen?</li>
@@ -191,7 +196,7 @@
 </section>
 <section class="kwali">
   <fieldset class="wheel" id="kwaliteiten">
-      <p>Kwaliteiten</p>
+      <p>Kwaliteiten/Valkuilen <br><span style="color: #00b499; font-size: 70%; font-weight: normal;">Wat zijn jouw kwaliteiten en valkuilen?</span></p>
       <ul>
         <li>Geduldig / afwachtend</li>
         <li>Analytisch / overanalyseren</li>
@@ -242,7 +247,7 @@
 
     
     <div class="footer">
-        <p>© 2024 - ROC Da Vinci College</p>
+        <p>2024 - Patty Slagboom</p>
     </div>
   </body>
 </html>
